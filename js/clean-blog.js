@@ -19,6 +19,7 @@ $(function() {
 				var name = $("input#name").val();
 				var email = $("input#email").val();
 				var park = $("#park").val();
+				var title = $("input#title").val();
 				var message = $("textarea#message").val();
 				var firstName = name; // For Success/Failure Message
 				// Check for white space in name for Success/Fail message
@@ -32,6 +33,7 @@ $(function() {
 						name: name,
 						park: park,
 						email: email,
+						title: title,
 						message: message
 					},
 					cache: false,

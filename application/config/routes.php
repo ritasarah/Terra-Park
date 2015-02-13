@@ -41,6 +41,8 @@
 $route['default_controller'] = "home";
 $route['404_override'] = '';
 
+$route['view/(:num)'] = 'post/view/$1';
+
 
 /* End of file routes.php */
 /* Location: ./application/config/routes.php */

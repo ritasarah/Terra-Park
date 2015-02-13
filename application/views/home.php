@@ -23,25 +23,21 @@
 		<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
 			<?php foreach ($listTicket->result() as $row): ?>
 				<div class="post-preview">
-					<h2 class="post-title">
+					<a href="<?php echo site_url("view"); ?>/<?php echo $row->id_pengaduan; ?>"><h2 class="post-title">
 						<?php echo $row->judul; ?>
-					</h2>
+					</h2></a>
 					<p class="post-meta">
 						<?php
 						$query = $this->db->query('SELECT nama FROM taman WHERE id_taman=' . $row->id_taman . ' LIMIT 1');
 						$taman = $query->row();
 						?>
-						Created on <?php echo $row->tanggal; ?> about <?php echo $taman->nama; ?>
+						Created on <?php echo $row->tanggal; ?> by <?php echo $row->nama; ?> about <?php echo $taman->nama; ?>
 						<br/>
 						Status: <?php echo $row->status; ?>
 						<?php if ($this->session->userdata('role') == "admin"): ?>
 							<a href="#">[Email]</a> <a href="#">[Verify]</a> <a href="#">[Delete]</a> <?php //TODO: AJAXify?  ?>
 						<?php endif; ?>
 					</p>
-					<div>
-						<?php echo $row->deskripsi; ?>
-					</div>
-					
 				</div>
 				<hr>
 			<?php endforeach; ?>

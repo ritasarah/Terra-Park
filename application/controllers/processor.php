@@ -7,6 +7,7 @@ class processor extends CI_Controller {
 		if (!empty($_POST['name'])  		&&
 			!empty($_POST['email']) 		&&
 			!empty($_POST['park']) 		&&
+			!empty($_POST['title'])	&&
 			!empty($_POST['message'])	&&
 			filter_var($_POST['email'],FILTER_VALIDATE_EMAIL))
 				{
@@ -17,7 +18,7 @@ class processor extends CI_Controller {
 				'email' => $_POST['email'],
 				'id_taman' => $_POST['park'],
 				'deskripsi' => $_POST['message'],
-				'judul' => $_POST['message'],
+				'judul' => $_POST['title'],
 				'status' => "unverified",
 				'tanggal' => $curDate
             );

@@ -11,10 +11,10 @@
     <title><?php echo $title; ?></title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="<?php echo site_url("/"); ?>/css/bootstrap.css" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link href="css/clean-blog.css" rel="stylesheet">
+    <link href="<?php echo site_url("/"); ?>/css/clean-blog.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
