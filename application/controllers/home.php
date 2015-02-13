@@ -21,6 +21,8 @@ class Home extends CI_Controller {
 	public function index()
 	{
 		$data['title'] = "Terra Park Homepage";
+		$this->load->database();
+		$data['listTicket'] = $this->db->query('SELECT * FROM pengaduan');
 		$this->load->view('head', $data);
 		$this->load->view('nav', $data);
 		$this->load->view('home', $data);

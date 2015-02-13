@@ -45,14 +45,14 @@
 | the active record class
 */
 
-$active_group = 'default';
+$active_group = 'dev';
 $active_record = TRUE;
 
 $db['default']['hostname'] = 'localhost';
-$db['default']['username'] = 'terarium';
-$db['default']['password'] = 'UnVGSGYSjL9GvrPf';
-$db['default']['database'] = 'terarium';
-$db['default']['dbdriver'] = 'mysqli';
+$db['default']['username'] = 'dalvacom_terariu';
+$db['default']['password'] = 'DxhTvqOWzzT[';
+$db['default']['database'] = 'dalvacom_terarium';
+$db['default']['dbdriver'] = 'mysql';
 $db['default']['dbprefix'] = '';
 $db['default']['pconnect'] = TRUE;
 $db['default']['db_debug'] = TRUE;
@@ -63,6 +63,22 @@ $db['default']['dbcollat'] = 'utf8_general_ci';
 $db['default']['swap_pre'] = '';
 $db['default']['autoinit'] = TRUE;
 $db['default']['stricton'] = FALSE;
+
+$db['dev']['hostname'] = 'localhost';
+$db['dev']['username'] = 'root';
+$db['dev']['password'] = '';
+$db['dev']['database'] = 'terarium';
+$db['dev']['dbdriver'] = 'mysql';
+$db['dev']['dbprefix'] = '';
+$db['dev']['pconnect'] = TRUE;
+$db['dev']['db_debug'] = TRUE;
+$db['dev']['cache_on'] = FALSE;
+$db['dev']['cachedir'] = '';
+$db['dev']['char_set'] = 'utf8';
+$db['dev']['dbcollat'] = 'utf8_general_ci';
+$db['dev']['swap_pre'] = '';
+$db['dev']['autoinit'] = TRUE;
+$db['dev']['stricton'] = FALSE;
 
 
 /* End of file database.php */
