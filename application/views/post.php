@@ -27,7 +27,8 @@
 					<br/><br/> <!-- diakses admin -->
 
 					Laporan : <span><form name="myWebForm" action="mailto:youremail@email.com" method="post">
-							<input type="file" name="uploadField" />
+							<input type="file" name="uploadField" /> <br/>
+							<button type="submit" class="btn">Send</button>
 						</form></span>
 					<!--diakses dinas --> 
 				</div>
