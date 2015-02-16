@@ -25,15 +25,21 @@ class processor extends CI_Controller {
 			$this->db->insert('pengaduan', $data); 
 			echo "new ticket inserted. YAAY";
 		} else if (	!empty($_POST['name'])  	&&
-					!empty($_POST['location']))
+					!empty($_POST['location']) &&
+					!empty($_POST['id']))
 				{
 			$this->load->database();
-			$data = array(
-				'nama' => $_POST['name'],
-				'lokasi' => $_POST['location']
-            );
-			$this->db->insert('taman', $data); 
-			echo "new taman inserted. YAAY";
+			if($_POST['id'] === 0) {
+				$data = array(
+					'nama' => $_POST['name'],
+					'lokasi' => $_POST['location']
+				);
+				$this->db->insert('taman', $data); 
+				echo "new taman inserted. YAAY";
+			} else {
+				$this->db->query('UPDATE taman SET nama="'. $_POST['name'] .'", lokasi="'. $_POST['location'] .'" WHERE id_taman=' . $_POST['id']);
+				echo "taman edited. YAAY";
+			}
 		} else if (	!empty($_POST['name'])  	&&
 					!empty($_POST['pass'])		&&
 					!empty($_POST['role'])		&&

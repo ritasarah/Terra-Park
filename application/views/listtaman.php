@@ -1,7 +1,7 @@
 
 <!-- Page Header -->
 <!-- Set your background image for this header on the line below. -->
-<header class="intro-header" style="background-image: url('img/home-bg.jpg')">
+<header class="intro-header" style="background-image: url('<?php echo site_url("/"); ?>/img/home-bg.jpg')">
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
@@ -30,7 +30,8 @@
 						<span>Alamat: <?php echo $row->lokasi; ?></span>
 						<br/>
 						<?php if ($this->session->userdata('role') == "admin"): ?>
-							<span><a href="#">[Delete]</a></span> <?php //TODO: AJAXify? ?>
+							<span><a href="<?php echo site_url("listtaman/edit"); ?>/<?php echo $row->id_taman ?>">[Edit]</a></span> 
+							<span><a href="<?php echo site_url("listtaman/delete"); ?>/<?php echo $row->id_taman ?>">[Delete]</a></span>
 						<?php endif; ?>
 					</div>
 				</div>

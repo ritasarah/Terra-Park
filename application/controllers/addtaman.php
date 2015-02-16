@@ -9,6 +9,9 @@ class AddTaman extends CI_Controller {
 			return false;
 		}
 		$data['title'] = "Tambah Data Taman Baru";
+		$data['idT'] = "0";
+		$data['nama'] = "";
+		$data['lokasi'] = "";
 		$this->load->view('head', $data);
 		$this->load->view('nav', $data);
 		$this->load->view('addtaman', $data);

@@ -6,6 +6,9 @@
 
 // Contact Form Scripts
 
+
+var url = "";
+
 $(function() {
 	if (context === "aduan") {
 		$("input,textarea").jqBootstrapValidation({
@@ -27,7 +30,7 @@ $(function() {
 					firstName = name.split(' ').slice(0, -1).join(' ');
 				}
 				$.ajax({
-					url: "./processor",
+					url: url + "/processor",
 					type: "POST",
 					data: {
 						name: name,
@@ -77,12 +80,14 @@ $(function() {
 				// get values from FORM
 				var name = $("input#name").val();
 				var lokasi = $("input#lokasi").val();
+				var idT = $("input#idTaman").val();
 				$.ajax({
-					url: "./processor",
+					url: url + "/processor",
 					type: "POST",
 					data: {
 						name: name,
-						location: lokasi
+						location: lokasi,
+						id: idT
 					},
 					cache: false,
 					success: function() {
@@ -96,7 +101,7 @@ $(function() {
 							.append('</div>');
 
 						//clear all fields
-						$('#contactForm').trigger("reset");
+						//$('#contactForm').trigger("reset");
 					},
 					error: function() {
 						// Fail message
@@ -128,7 +133,7 @@ $(function() {
 				var role = $("#role").val();
 				var affi = $("#affi").val();
 				$.ajax({
-					url: "./processor",
+					url: url + "/processor",
 					type: "POST",
 					data: {
 						name: name,

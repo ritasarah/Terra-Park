@@ -1,7 +1,7 @@
 
     <!-- Page Header -->
     <!-- Set your background image for this header on the line below. -->
-    <header class="intro-header" style="background-image: url('img/contact-bg.jpg')">
+    <header class="intro-header" style="background-image: url('<?php echo site_url("/"); ?>img/contact-bg.jpg')">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
@@ -23,21 +23,19 @@
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                 <h2>Form Penambahan Taman</h2>
-                <!-- Contact Form - Enter your email address on line 19 of the mail/contact_me.php file to make this form work. -->
-                <!-- WARNING: Some web hosts do not allow emails to be sent through forms to common mail hosts like Gmail or Yahoo. It's recommended that you use a private domain email address! -->
-                <!-- NOTE: To use the contact form, your site must be on a live web host with PHP! The form will not work locally! -->
                 <form name="sentMessage" id="contactForm" novalidate>
+					<input type="hidden" style="display:none;" id="idTaman" value="<?php echo $idT ?>">
                     <div class="row control-group">
                         <div class="form-group col-xs-12 floating-label-form-group controls">
                             <label>Name</label>
-                            <input type="text" class="form-control" placeholder="Name" id="name" required data-validation-required-message="Please enter your name.">
+                            <input type="text" class="form-control" placeholder="Name" value="<?php echo $nama ?>" id="name" required data-validation-required-message="Please enter your name.">
                             <p class="help-block text-danger"></p>
                         </div>
                     </div>
                     <div class="row control-group">
                         <div class="form-group col-xs-12 floating-label-form-group controls">
                             <label>Lokasi</label>
-                            <input type="lokasi" class="form-control" placeholder="Lokasi" id="lokasi" required data-validation-required-message="Please enter your location.">
+                            <input type="lokasi" class="form-control" placeholder="Lokasi" value="<?php echo $lokasi ?>" id="lokasi" required data-validation-required-message="Please enter your location.">
                             <p class="help-block text-danger"></p>
                         </div>
                     </div>
